@@ -1,0 +1,28 @@
+@import "../../style/App.scss";
+
+.backdrops_block {}
+
+.backdrops_content {
+  color: wheat;
+  margin: 0 -10px;
+}
+
+.backdrop_item {
+  padding: 10px;
+
+  img {
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+  }
+}
+
+.posters_block {}
+
+.posters_content {
+  margin: 0 -10px;
+}
+
+.poster_item {
+  padding: 10px;
+
+}

@@ -1,0 +1,54 @@
+@import "../../style/App.scss";
+
+
+@import "../../style/App.scss";
+
+.description_content {}
+
+.main_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+
+}
+
+.block_image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+
+}
+
+.main_img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(40%);
+
+}
+
+.shadow_image {
+  background-image: linear-gradient(to top, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0.5) 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.movie_info {
+  padding-top: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  >div {
+    position: relative;
+  }
+}

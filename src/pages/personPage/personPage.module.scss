@@ -1,0 +1,78 @@
+@import "../../style/App.scss";
+
+
+$main-elem-color: rgb(238, 255, 0);
+
+
+.person_details_block {
+  display: flex;
+  column-gap: 20px;
+  @include adaptiveValue("column-gap", 20, 5, 1000, 400, 1);
+
+}
+
+.person_image {
+
+  img {
+    max-width: 475px;
+    @include adaptiveValue("width", 475, 250, 1440, 800, 1);
+    @include adaptiveValue("width", 250, 100, 800, 350, 1);
+  }
+
+}
+
+.poster_img {}
+
+.person_info {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-right: 20px;
+
+
+  >div:not(:last-child) {
+    padding-bottom: 20px;
+  }
+
+
+}
+
+.person_name {
+  font-size: 3rem
+}
+
+.person_birthday {}
+
+.person_city_brd {}
+
+.person_biography {
+  font-size: 1.3rem;
+
+  @media (max-width:(1000px)) {
+    font-size: 1rem;
+  }
+}
+
+.content_block {}
+
+.title_content {}
+
+.movies_block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  row-gap: 10px;
+  justify-content: space-around;
+
+
+}
+
+.load_btn {
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  color: red;
+  font-size: 1.5rem;
+}

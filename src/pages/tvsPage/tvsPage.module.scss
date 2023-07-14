@@ -1,0 +1,10 @@
+@import "../../style/App.scss";
+
+
+.movies_block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  row-gap: 10px;
+  justify-content: space-around;
+}

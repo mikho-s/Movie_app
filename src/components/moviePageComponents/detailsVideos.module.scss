@@ -1,0 +1,19 @@
+@import "../../style/App.scss";
+
+.trailer_block {}
+
+.ifame_trailer {
+  text-align: center;
+  aspect-ratio: 16 / 9;
+}
+
+.videos_block {}
+
+.videos_items {
+  margin: 0 -10px;
+}
+
+.ifame_video {
+  aspect-ratio: 16 / 9;
+  padding: 10px;
+}

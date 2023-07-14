@@ -1,0 +1,21 @@
+@import "../../style/vars.scss";
+
+
+
+.menu {
+  padding: 0 15px;
+}
+
+.body {
+  display: flex;
+  gap: 25px;
+  color: white;
+}
+
+.item {
+  cursor: pointer;
+
+  &:hover {
+    color: red;
+  }
+}

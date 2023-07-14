@@ -1,0 +1,14 @@
+.footer_main {
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  padding: 10px 0;
+  margin-top: 20px;
+  border-top: 1px solid white;
+}
+
+.footer_item {
+  padding: 10px;
+}

@@ -1,0 +1,27 @@
+.pagination_block {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.page_item {
+  cursor: pointer;
+  padding: 5px;
+  // border: 1px solid white;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.726)(0, 0, 0) !important;
+    color: yellow;
+  }
+}
+
+.page_item_active {
+  color: red;
+  // background-color: green;
+}
+
+.pagination_dots {
+  padding: 0 5px;
+  bottom: 0;
+}
