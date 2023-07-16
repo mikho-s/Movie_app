@@ -1,16 +1,20 @@
-.bloci {
-  position: relative;
-  height: 300px;
-  width: 1000px;
-
-  color: white;
-  font-size: 30px;
-}
-
 .movies_block {
   display: flex;
   flex-wrap: wrap;
   gap: 1%;
   row-gap: 10px;
   justify-content: space-around;
+}
+
+.header_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.searchOptions {
+
+  display: flex;
+  gap: 10px;
+  // color: #960000;
 }

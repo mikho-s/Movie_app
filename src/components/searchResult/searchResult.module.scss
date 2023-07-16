@@ -1,0 +1,21 @@
+.result_container {
+  // position: relative;
+  margin-top: 30px;
+  display: flex;
+  min-width: 300px;
+  min-height: 300px;
+  border: 1px solid white;
+
+  >div {
+    width: 200px;
+  }
+}
+
+.movie_result {
+  color: white;
+}
+
+.tv_result {
+  color: white;
+
+}

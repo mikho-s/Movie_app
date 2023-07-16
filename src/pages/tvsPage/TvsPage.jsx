@@ -20,6 +20,7 @@ const TvsPage = () => {
       // }
       //  else {
       const allParams = Object.fromEntries(searchParams);
+      console.log(allParams);
       const initialPage = Number(searchParams.get('page')) || 1;
       setPage(initialPage);
       data = await getPromoSimpleReq('discover/tv', allParams);

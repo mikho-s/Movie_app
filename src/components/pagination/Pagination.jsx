@@ -7,6 +7,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 
   const handlePageChange = (pageNumber) => {
     onPageChange(pageNumber);
+    // return pageNumber;
   };
 
   if (currentPage !== 1) {

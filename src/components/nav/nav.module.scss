@@ -14,8 +14,13 @@
 
 .item {
   cursor: pointer;
+  color: white;
 
   &:hover {
     color: red;
+  }
+
+  .active {
+    color: rgb(255, 0, 0);
   }
 }

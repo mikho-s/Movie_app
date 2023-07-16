@@ -19,7 +19,8 @@ export const routes = [
   { path: "movie/:id", element: <MoviePage />, exact: false },
   // { path: "movies/genre", element: <GenrePage />, exact: true },
   { path: "tv/:id", element: <TvSerialPage />, exact: true },
-  { path: "tvs", element: <TvsPage />, exact: true },
+  // { path: "tvs", element: <TvsPage />, exact: true },
+  { path: "tvs", element: <MoviesPage />, exact: true },
   { path: "person/:id", element: <PersonPage />, exact: true },
 ]
 

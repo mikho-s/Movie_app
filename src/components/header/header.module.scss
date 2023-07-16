@@ -32,7 +32,6 @@
 .search_block {
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid white;
 }
 
 input {
@@ -43,4 +42,21 @@ input {
 .search_logo {
   cursor: pointer;
   color: white;
+}
+
+.search {
+  border-bottom: 1px solid white;
+
+}
+
+.search_block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.search_result_block {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
