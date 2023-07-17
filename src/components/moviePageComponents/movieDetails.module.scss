@@ -56,6 +56,14 @@
 .genres {
   display: flex;
   gap: 15px;
+
+  a {
+    color: white;
+
+    &:hover {
+      color: red;
+    }
+  }
 }
 
 .genr {

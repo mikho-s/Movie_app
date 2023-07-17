@@ -10,6 +10,12 @@ export const tmdbImageSrcW342 = (path) => {
 export const tmdbImageSrcW185 = (path) => {
   return `https://image.tmdb.org/t/p/w185${path}`
 }
+export const tmdbImageSrcW154 = (path) => {
+  return `https://image.tmdb.org/t/p/w154${path}`
+}
+export const tmdbImageSrcW92 = (path) => {
+  return `https://image.tmdb.org/t/p/w92${path}`
+}
 export const tmdbMiniImageSrc = (path) => {
   if (path) {
     return `https://image.tmdb.org/t/p/w138_and_h175_face${path}`;

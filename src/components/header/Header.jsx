@@ -9,17 +9,33 @@ const Header = () => {
   const [searchText, setSearchText] = useState('');
   const [isFocused, setIsFocused] = useState(false);
 
+  const [linkClicked, setLinkClicked] = useState(false);
+
+
   const handleInputChange = (event) => {
     setSearchText(event.target.value);
   };
 
   const handleInputFocus = () => {
     setIsFocused(true);
+    setLinkClicked(false);
+
   };
 
   const handleInputBlur = () => {
-    setIsFocused(false);
+    setTimeout(() => {
+      setIsFocused(false);
+    }, 500);
+
+    // setIsFocused(false);
+
   };
+
+  const handleLinkClick = () => {
+    debugger
+    setLinkClicked(true);
+  };
+
   return (
     <header className={clas.header1}>
       <div className={`${clas.header_container} container`}>
@@ -37,9 +53,16 @@ const Header = () => {
             <IoIosSearch className={clas.search_logo} ></IoIosSearch>
           </div>
 
-          {/* {isFocused && searchText && (
-            <div className={clas.search_result_block}><SearchResult query={searchText} /></div>
-          )} */}
+          {isFocused && searchText && !linkClicked && (
+            <div className={clas.search_result_block}>
+              <SearchResult query={searchText}
+                onClick={handleLinkClick}
+              />
+            </div>
+          )}
+
+
+
         </div>
       </div>
     </header>
