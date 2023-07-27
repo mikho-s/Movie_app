@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import clas from './moviesPreviewRow.module.scss';
-import '../../style/App.scss';
+import '@style/App.scss';
 import Slider from '../slider/Slider';
-import { getPromoSimpleReq } from '../../API/axios';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import PosterItem from '../posterItem/PosterItem';
-import { getPath, getTypeMed, getTypePath } from '../../utils/utils';
+import { getPath, getTypeMed, getTypePath } from '@utils/utils';
 import { useDispatch, useSelector } from 'react-redux';
-import { setMoviesForPreview } from '../../store/PreviewsForHomePage';
 
 
 const MoviesPreviewRow = ({ preview, ...props }) => {

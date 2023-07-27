@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import clas from './personPage.module.scss';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
-import { getPromoSimpleReq } from '../../API/axios';
-import { genresMovie, genresTv, getPath, getYearMovie, tmdbImageSrc } from '../../utils/utils';
-import PosterItem from '../../components/posterItem/PosterItem';
-import { tmdbImageSrcW342 } from '../../utils/utils';
-import PosterItemForSrch from '../../components/posterItem/PosterItemForSrch';
+import { getPromoSimpleReq } from '@API/axios';
+import { genresMovie, genresTv, getPath, getYearMovie, tmdbImageSrc } from '@utils/utils';
+import PosterItemForSrch from '@components/posterItem/PosterItemForSrch';
 
 
 const PersonPage = () => {
@@ -17,8 +15,7 @@ const PersonPage = () => {
   const [page, setPage] = useState(1);
   const countMedia = 15;
 
-  // фильмов 134
-  // тв 42
+
 
   // useEffect(() => {
   //   setShowMovies(mediasSorted.slice(0, countMedia));
@@ -84,7 +81,7 @@ const PersonPage = () => {
       <div className={clas.content_block}>
         <div className={`${clas.title_content} regular_title`}> Movies</div>
         <div className={clas.movies_block}>
-          {showMovies.map((movie, index) => {
+          {showMovies.map(movie => {
             return (
               <PosterItemForSrch movie={movie} key={movie.id} />
             );

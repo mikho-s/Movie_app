@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import clas from './moviePage.module.scss';
 import { Link, useLocation, useParams } from 'react-router-dom';
-import { getPromoSimpleReq, getTrailerAndVideos } from '../../API/axios';
-import { getSomeImages, getSomePosters, tmdbBackImageSrc, } from '../../utils/utils';
-import MovieDetails from '../../components/moviePageComponents/MovieDetails';
-import DetailsVideos from '../../components/moviePageComponents/DetailsVideos';
-import DetailImages from '../../components/moviePageComponents/DetailImages';
+import { getPromoSimpleReq, getTrailerAndVideos } from '@API/axios';
+import { getSomeImages, getSomePosters, tmdbBackImageSrc, } from '@utils/utils';
+import MovieDetails from '@components/moviePageComponents/MovieDetails';
+import DetailsVideos from '@components/moviePageComponents/DetailsVideos';
+import DetailImages from '@components/moviePageComponents/DetailImages';
 
 const MoviePage = () => {
   const [movie, setMovie] = useState({});

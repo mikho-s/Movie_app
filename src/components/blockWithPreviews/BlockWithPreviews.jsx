@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import clas from './blockWithPreviews.module.scss'
-import MoviesPreviewRow from '../moviesPreviewRow/MoviesPreviewRow';
-import { useFetching } from '../../hooks/useFetching';
-import { getPromoSimpleReq } from '../../API/axios';
-import { setMoviesForPreview } from '../../store/PreviewsForHomePage';
+import MoviesPreviewRow from '@components/moviesPreviewRow/MoviesPreviewRow';
+import { useFetching } from '@hooks/useFetching';
+import { getPromoSimpleReq } from '@API/axios';
+import { setMoviesForPreview } from '@store/PreviewsForHomePage';
 import { useDispatch, useSelector } from 'react-redux';
-import { setLoadingForPromos } from '../../store/GlobalLoading';
+import { setLoadingForPromos } from '@store/GlobalLoading';
 
 const BlockWithPreviews = () => {
 

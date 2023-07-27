@@ -1,16 +1,14 @@
 
 import React, { useEffect, useState } from 'react';
-import Header from '../components/header/Header';
-import Banner from '../components/banner/Banner';
-import { useFetching } from '../hooks/useFetching';
-import RequestsService from '../API/Requests';
-import Slider from '../components/slider/Slider';
-import BlockWithPreviews from '../components/blockWithPreviews/BlockWithPreviews';
-import { getPromoSimpleReq } from '../API/axios';
-import { setMoviesForMainSlider } from '../store/PreviewsForHomePage';
+import Banner from '@components/banner/Banner';
+import { useFetching } from '@hooks/useFetching';
+import Slider from '@components/slider/Slider';
+import BlockWithPreviews from '@components/blockWithPreviews/BlockWithPreviews';
+import { getPromoSimpleReq } from '@API/axios';
+import { setMoviesForMainSlider } from '@store/PreviewsForHomePage';
 import { useDispatch, useSelector } from 'react-redux';
-import { setLoadingForSlider } from '../store/GlobalLoading';
-import Skeleton from '../components/skeleton/Skeleton';
+import { setLoadingForSlider } from '@store/GlobalLoading';
+import Skeleton from '@components/skeleton/Skeleton';
 
 
 

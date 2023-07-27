@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@components": [
+        "src/components"
+      ],
+      "@hooks": [
+        "src/hooks"
+      ],
+      "@pages": [
+        "src/pages"
+      ],
+      "@router": [
+        "src/router"
+      ],
+      "@store": [
+        "src/store"
+      ],
+      "@style": [
+        "src/style"
+      ],
+      "@utils": [
+        "src/utils"
+      ],
+      "@public": [
+        "public"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

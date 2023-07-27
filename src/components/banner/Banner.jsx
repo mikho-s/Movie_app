@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import clas from './banner.module.scss'
-import Buttons from '../UI/buttons/Buttons';
-import { tmdbBackImageSrc, tmdbBackImageSrcW1280 } from '../../utils/utils';
+import Buttons from '@components/UI/buttons/Buttons';
+import { tmdbBackImageSrc, tmdbBackImageSrcW1280 } from '@utils/utils';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 

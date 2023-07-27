@@ -111,8 +111,9 @@
 
 .cast_items {}
 
-.cast_item {
+.cast_item_body {
   // cursor: pointer;
+  padding: 0 5px;
   position: relative;
   height: 100%;
 
@@ -122,6 +123,10 @@
     object-fit: contain;
     border-radius: 12px;
   }
+}
+
+.cast_image {
+  height: 100%;
 }
 
 .actor_name {

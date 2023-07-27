@@ -1,7 +1,7 @@
 import React from 'react';
 import clas from './posterItemForSrch.module.scss';
 import { Link } from 'react-router-dom';
-import { genresMovie, genresTv, getTypePath, getYearMovie, tmdbImageSrcW342 } from '../../utils/utils';
+import { genresMovie, genresTv, getTypePath, getYearMovie, tmdbImageSrcW342 } from '@utils/utils';
 
 
 const PosterItemForSrch = ({ movie }) => {

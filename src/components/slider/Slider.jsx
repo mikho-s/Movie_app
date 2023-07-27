@@ -2,7 +2,7 @@
 
 import './slider.css'
 import Slick from 'react-slick';
-import '../../style/App.scss'
+import '@style/App.scss'
 
 
 const Slider = ({ slidesMargin, slidesToShow, slidesToScroll, movies, children, ...props }) => {

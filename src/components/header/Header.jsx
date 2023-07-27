@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import clas from './header.module.scss';
-import Nav from '../nav/Nav';
+import Nav from '@components/nav/Nav';
 import { IoIosSearch } from 'react-icons/io'
-import SearchResult from '../searchResult/SearchResult';
+import SearchResult from '@components/searchResult/SearchResult';
 
 
 const Header = () => {

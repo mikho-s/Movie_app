@@ -1,7 +1,7 @@
 import React from 'react';
 import clas from './detailImages.module.scss';
-import Slider from '../slider/Slider';
-import { tmdbBackImageSrc, tmdbImageSrc, tmdbImageSrcW342 } from '../../utils/utils';
+import Slider from '@components/slider/Slider';
+import { tmdbBackImageSrc, tmdbImageSrc, tmdbImageSrcW342 } from '@utils/utils';
 
 
 const DetailImages = ({ backImages, posterImages, ...props }) => {

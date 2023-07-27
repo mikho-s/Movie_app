@@ -1,7 +1,7 @@
 import React from 'react';
 import clas from './footer.module.scss';
 import { Link } from 'react-router-dom';
-import Nav from '../nav/Nav';
+import Nav from '@components/nav/Nav';
 
 
 const Footer = () => {

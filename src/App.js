@@ -3,7 +3,7 @@ import HomePage from './pages/HomePage';
 import { Route, RouterProvider, ScrollRestoration, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import './style/App.scss';
 import { routes } from './router';
-import Layout from './pages/Layout';
+import Layout from '@pages/Layout';
 
 
 const router = createBrowserRouter(

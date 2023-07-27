@@ -1,12 +1,10 @@
-import HomePage from "../pages/HomePage";
-import AboutPage from "../pages/about/AboutPage";
-import ErrorPage from "../pages/errorPage/ErrorPage";
-import GenrePage from "../pages/genrePage/GenrePage";
-import LoginPage from "../pages/login/LoginPage";
-import MoviePage from "../pages/moviepage/MoviePage";
-import MoviesPage from "../pages/moviesPage/MoviesPage";
-import PersonPage from "../pages/personPage/PersonPage";
-import TvSerialPage from "../pages/tvSeriesPage/TvSerialPage";
+import AboutPage from "@pages/about/AboutPage";
+import ErrorPage from "@pages/errorPage/ErrorPage";
+import LoginPage from "@pages/login/LoginPage";
+import MoviePage from "@pages/moviepage/MoviePage";
+import MoviesPage from "@pages/moviesPage/MoviesPage";
+import PersonPage from "@pages/personPage/PersonPage";
+import TvSerialPage from "@pages/tvSeriesPage/TvSerialPage";
 import TvsPage from "../pages/tvsPage/TvsPage";
 
 export const routes = [

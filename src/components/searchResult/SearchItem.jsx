@@ -1,6 +1,6 @@
 import React from 'react';
 import clas from './searchResult.module.scss';
-import { getTypePath, tmdbImageSrcW92 } from '../../utils/utils';
+import { getTypePath, tmdbImageSrcW92 } from '@utils/utils';
 import { Link } from 'react-router-dom';
 
 const SearchItem = ({ movie, onClick }) => {

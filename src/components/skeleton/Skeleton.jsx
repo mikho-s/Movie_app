@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import clas from './skeleton.module.scss'
 import { useSelector } from 'react-redux';
-import Slider from '../slider/Slider';
+import Slider from '@components/slider/Slider';
 
 const Skeleton = () => {
   const [slidesToShow, setSlidesToShow] = useState(7);

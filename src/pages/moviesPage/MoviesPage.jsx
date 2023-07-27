@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
-import { getPromoSimpleReq } from '../../API/axios';
-import PosterItemForSrch from '../../components/posterItem/PosterItemForSrch';
+import { getPromoSimpleReq } from '@API/axios';
+import PosterItemForSrch from '@components/posterItem/PosterItemForSrch';
 import clas from './moviesPage.module.scss';
-import Pagination from '../../components/pagination/Pagination';
-import MySelect from '../../components/UI/select/MySelect';
-import { genresMovie, genresTv } from '../../utils/utils';
+import Pagination from '@components/pagination/Pagination';
+import MySelect from '@components/UI/select/MySelect';
+import { genresMovie, genresTv } from '@utils/utils';
 
 
 const MoviesPage = () => {

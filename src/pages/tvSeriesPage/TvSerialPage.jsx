@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import clas from './tvSeriesPage.module.scss';
 
 import { useLocation, useParams } from 'react-router-dom';
-import { getPromoSimpleReq, getTrailerAndVideos } from '../../API/axios';
-import { getSomeImages, getSomePosters, tmdbBackImageSrc } from '../../utils/utils';
-import MovieDetails from '../../components/moviePageComponents/MovieDetails';
-import DetailsVideos from '../../components/moviePageComponents/DetailsVideos';
-import DetailImages from '../../components/moviePageComponents/DetailImages';
+import { getPromoSimpleReq, getTrailerAndVideos } from '@API/axios';
+import { getSomeImages, getSomePosters, tmdbBackImageSrc } from '@utils/utils';
+import MovieDetails from '@components/moviePageComponents/MovieDetails';
+import DetailsVideos from '@components/moviePageComponents/DetailsVideos';
+import DetailImages from '@components/moviePageComponents/DetailImages';
 
 const TvSerialPage = () => {
   const [movie, setMovie] = useState({});

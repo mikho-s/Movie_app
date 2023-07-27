@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import clas from './movieDetails.module.scss';
-import { convertStringForQuery, getYearMovie, tmdbImageSrc, tmdbMiniImageSrc } from '../../utils/utils';
-import Slider from '../slider/Slider';
+import { convertStringForQuery, getYearMovie, tmdbImageSrc, tmdbMiniImageSrc } from '@utils/utils';
+import Slider from '@components/slider/Slider';
 import { Link } from 'react-router-dom';
 
 
@@ -84,11 +84,14 @@ const MovieDetails = ({ movie, cast, ...props }) => {
               <Slider slidesToShow={slidesToShow} slidesToScroll={slidesToScroll}  >
                 {cast.map(person => {
                   return <Link key={person.id}
-                    className={clas.cast_item}
+                    className={clas.cast_item_body}
                     to={`/person/${person.id}`}
                   >
-                    <img src={tmdbMiniImageSrc(person.profile_path)} alt="" />
-                    <div className={clas.actor_name}>{person.name}</div>
+                    <div>
+                      <img className={clas.cast_image} src={tmdbMiniImageSrc(person.profile_path)} alt="" />
+                      <div className={clas.actor_name}>{person.name}</div>
+
+                    </div>
                   </Link>
                 })
                 }

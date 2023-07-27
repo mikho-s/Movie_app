@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import clas from './tvsPage.module.scss';
 import { useSearchParams } from 'react-router-dom';
-import { getPromoSimpleReq } from '../../API/axios';
-import Pagination from '../../components/pagination/Pagination';
-import PosterItemForSrch from '../../components/posterItem/PosterItemForSrch';
+import { getPromoSimpleReq } from '@API/axios';
+import Pagination from '@components/pagination/Pagination';
+import PosterItemForSrch from '@components/posterItem/PosterItemForSrch';
 
 
 const TvsPage = () => {

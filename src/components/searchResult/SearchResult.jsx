@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import clas from './searchResult.module.scss';
-import { getSearchReq } from '../../API/axios';
+import { getSearchReq } from '@API/axios';
 import SearchItem from './SearchItem';
 
 

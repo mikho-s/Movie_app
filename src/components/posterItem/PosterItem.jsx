@@ -1,6 +1,6 @@
 import React from 'react';
 import clas from './posterItem.module.scss';
-import { genresMovie, genresTv, getYearMovie, tmdbImageSrc, tmdbImageSrcW185, tmdbImageSrcW342 } from '../../utils/utils';
+import { genresMovie, genresTv, getYearMovie, tmdbImageSrc, tmdbImageSrcW185, tmdbImageSrcW342 } from '@utils/utils';
 import { useSelector } from 'react-redux';
 
 
