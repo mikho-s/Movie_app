@@ -7,6 +7,7 @@ $main-elem-color: rgb(238, 255, 0);
   padding: 0 10px;
   overflow: hidden;
   position: relative;
+  min-height: 230px;
 
   &:hover {
     scale: 1.05;

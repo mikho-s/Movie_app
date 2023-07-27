@@ -1,9 +1,13 @@
 import React from 'react';
 import clas from './posterItem.module.scss';
-import { genresMovie, genresTv, getYearMovie, tmdbImageSrc, tmdbImageSrcW342 } from '../../utils/utils';
+import { genresMovie, genresTv, getYearMovie, tmdbImageSrc, tmdbImageSrcW185, tmdbImageSrcW342 } from '../../utils/utils';
+import { useSelector } from 'react-redux';
 
 
 const PosterItem = ({ movie }) => {
+
+
+  const isGlobalLoadingMovies = useSelector((state) => state.loading.mainPromosLoading || state.loading.mainSliderLoading);
 
 
   const getGenresNames = (movie) => {
@@ -19,10 +23,19 @@ const PosterItem = ({ movie }) => {
     });
   };
 
+  const loadPosterImg = (path) => {
+    if (isGlobalLoadingMovies) {
+      return tmdbImageSrcW185(path)
+    } else {
+      return tmdbImageSrcW342(path)
+
+    }
+  }
 
   return (
     <article className={clas.item}>
-      <img src={tmdbImageSrcW342(movie.poster_path)} alt="poster" />
+      <img src={tmdbImageSrcW185(movie.poster_path)} alt="poster" />
+      {/* <img src={loadPosterImg(movie.poster_path)} alt="poster" /> */}
       <div className={clas.description_body}>
         <div className={clas.title_poster}>{movie.title || movie.name}</div>
         <div className={clas.vote_date_poster}>

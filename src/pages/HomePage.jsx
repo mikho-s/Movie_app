@@ -6,38 +6,60 @@ import { useFetching } from '../hooks/useFetching';
 import RequestsService from '../API/Requests';
 import Slider from '../components/slider/Slider';
 import BlockWithPreviews from '../components/blockWithPreviews/BlockWithPreviews';
+import { getPromoSimpleReq } from '../API/axios';
+import { setMoviesForMainSlider } from '../store/PreviewsForHomePage';
+import { useDispatch, useSelector } from 'react-redux';
+import { setLoadingForSlider } from '../store/GlobalLoading';
+import Skeleton from '../components/skeleton/Skeleton';
 
 
 
 
 const HomePage = () => {
-  const [movies, setMovies] = useState([])
+  // const [movies, setMovies] = useState([])
+
+  const dispatch = useDispatch();
+  const movies = useSelector((state) => state.slider.moviesBySlider || []);
+  const isGlobalLoadingMovies = useSelector((state) => state.loading.mainPromosLoading || state.loading.mainSliderLoading);
+
 
   const [fetchTrendingAll, isLoading, error] = useFetching(async () => {
-    const responce = await RequestsService.getTrendingAll();
-    setMovies(responce.data.results);
+    const responce = await getPromoSimpleReq('/trending/all/week');
+
+    dispatch(setMoviesForMainSlider(responce.results));
+    dispatch(setLoadingForSlider(isLoading));
   });
 
 
+
+
   useEffect(() => {
-    fetchTrendingAll()
-  }, [])
+    if (movies.length === 0) {
+      dispatch(setLoadingForSlider(true));
+      fetchTrendingAll();
+    }
+
+  }, []);
 
 
   return (
     <div>
-      {/* <Header /> */}
-      {movies.length
-        ? <Slider slidesToShow={1} slidesToScroll={1} >
-          {movies.map((movie, index) => {
-            return (<div key={index} >
-              <Banner movie={movie} />
-            </div>)
-          })}
-        </Slider>
-        : <div>Loading...</div>
+      {isGlobalLoadingMovies
+        ? <>
+          <Skeleton />
+          <BlockWithPreviews />
+        </>
+        : <>
+          <Slider slidesToShow={1} slidesToScroll={1} >
+            {movies.map(movie => {
+              return (<div key={movie.id} >
+                <Banner movie={movie} />
+              </div>)
+            })}
+          </Slider>
+          <BlockWithPreviews />
+        </>
       }
-      <BlockWithPreviews />
     </div>
   );
 };

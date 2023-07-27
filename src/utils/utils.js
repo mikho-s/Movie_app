@@ -26,6 +26,9 @@ export const tmdbMiniImageSrc = (path) => {
 export const tmdbBackImageSrc = (path) => {
   return `https://image.tmdb.org/t/p/original${path}`
 }
+export const tmdbBackImageSrcW1280 = (path) => {
+  return `https://image.tmdb.org/t/p/w1280${path}`
+}
 
 export const convertStringForQuery = (inputString) => {
   const lowerCaseString = inputString.toLowerCase();

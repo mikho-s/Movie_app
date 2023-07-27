@@ -1,5 +1,6 @@
 import React from 'react';
-import Header from '../../components/header/Header';
+import clas from './ErrorPage.module.scss';
+
 import { useParams } from 'react-router-dom';
 
 const ErrorPage = () => {
@@ -7,13 +8,12 @@ const ErrorPage = () => {
   console.log(params);
 
   return (
-    <div>
-      {/* <Header /> */}
-      <div>
-        <h1>
-          ERROR PAGE
-        </h1>
+    <div className={clas.main}>
+
+      <div className={clas.content}>
+        ERROR PAGE
       </div>
+
     </div>
   );
 };

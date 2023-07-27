@@ -8,7 +8,6 @@ import SearchResult from '../searchResult/SearchResult';
 const Header = () => {
   const [searchText, setSearchText] = useState('');
   const [isFocused, setIsFocused] = useState(false);
-
   const [linkClicked, setLinkClicked] = useState(false);
 
 
@@ -33,7 +32,11 @@ const Header = () => {
 
   const handleLinkClick = () => {
     debugger
+    setSearchText('')
     setLinkClicked(true);
+    setTimeout(() => {
+      setLinkClicked(false);
+    }, 500);
   };
 
   return (

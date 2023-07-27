@@ -6,19 +6,18 @@ import { getPromoSimpleReq } from '../../API/axios';
 import { Link, useNavigate } from 'react-router-dom';
 import PosterItem from '../posterItem/PosterItem';
 import { getPath, getTypeMed, getTypePath } from '../../utils/utils';
+import { useDispatch, useSelector } from 'react-redux';
+import { setMoviesForPreview } from '../../store/PreviewsForHomePage';
+
 
 const MoviesPreviewRow = ({ preview, ...props }) => {
-  const [movies, setMovies] = useState([]);
+  // const [movies, setMovies] = useState([]);
   const [slidesToShow, setSlidesToShow] = useState(7);
   const [slidesToScroll, setSlidesToScroll] = useState(5);
 
-  useEffect(() => {
-    const fetchMovies = async () => {
-      const data = await getPromoSimpleReq(preview.urlRequest, preview.additionalParams);
-      setMovies(data.results);
-    };
-    fetchMovies();
-  }, []);
+  const dispatch = useDispatch();
+  const movies = useSelector((state) => state.movies.moviesByPreview[preview.rowTitle] || []);
+
 
   const handleResize = () => {
     const windowWidth = window.innerWidth;
