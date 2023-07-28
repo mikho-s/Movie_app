@@ -32,9 +32,10 @@ const MoviePage = () => {
       setTrailer(trailerKey);
       setVideosData(videosData);
       const images = await getPromoSimpleReq(location.pathname + '/images');
-      // console.log(images);
+      console.log(images);
+      // debugger
       setBackDropImages(getSomeImages(images.backdrops, 8));
-      setPosterImages(getSomePosters(images.posters, 15));
+      setPosterImages(getSomePosters(images.posters, 2));
 
     };
     fetchMovies();

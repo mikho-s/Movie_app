@@ -17,23 +17,29 @@ const DetailsVideos = ({ trailer, videos, ...props }) => {
         ></iframe>
       </div>
       <div className={clas.videos_block}>
-        <div className='regular_title'>
-          Videos
-        </div>
-        <div className={clas.videos_items}>
-          <Slider slidesToShow={2} slidesToScroll={1}>
-            {videos.map(video => {
-              return <iframe key={video.id}
-                className={clas.ifame_video}
-                width="100%"
-                src={`https://www.youtube.com/embed/${video.key}`}
-                title="YouTube video player"
-              >
-              </iframe>
-            })
-            }
-          </Slider>
-        </div>
+        {videos.length > 1
+          ? <>
+            <div className='regular_title'>
+              Videos
+            </div>
+            <div className={clas.videos_items}>
+              <Slider slidesToShow={2} slidesToScroll={1}>
+                {videos.map(video => {
+                  return <iframe key={video.id}
+                    className={clas.ifame_video}
+                    width="100%"
+                    src={`https://www.youtube.com/embed/${video.key}`}
+                    title="YouTube video player"
+                  >
+                  </iframe>
+                })
+                }
+              </Slider>
+            </div>
+          </>
+          : <></>
+        }
+
 
       </div>
     </div>

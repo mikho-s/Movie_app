@@ -67,16 +67,8 @@ const Skeleton = () => {
         </div>
       </div>
       <div className={clas.previews_block}>
-        {/* 
-        <div className={clas.previews_item}>
-          <div className={clas.previews_title}></div>
-          <div className={clas.previews_images}>
-            <div className={clas.previews_img}></div>
-            // <img src="img/posterTemplPng.png" alt="" /> 
-          </div>
-        </div>   */}
         {previews.map((preview, index) => {
-          return <div className={clas.previews_item} key={index}>
+          return <div className={clas.previews_item} key={index + preview.rowTitle}>
             <div className={clas.previews_title}>{preview.rowTitle}</div>
             <Slider slidesToShow={slidesToShow} slidesToScroll={slidesToScroll}>
               {skeletonItems}
