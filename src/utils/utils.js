@@ -1,24 +1,25 @@
 // export const tmdbImageSrc = (path) => {
 //   return `https://image.tmdb.org/t/p/w440_and_h660_face${path}`
 // }
+const mainPath = 'https://image.tmdb.org/t/p'
 export const tmdbImageSrc = (path) => {
-  return `https://image.tmdb.org/t/p/w500${path}`
+  return `${mainPath}/w500${path}`
 }
 export const tmdbImageSrcW342 = (path) => {
-  return `https://image.tmdb.org/t/p/w342${path}`
+  return `${mainPath}/w342${path}`
 }
 export const tmdbImageSrcW185 = (path) => {
-  return `https://image.tmdb.org/t/p/w185${path}`
+  return `${mainPath}/w185${path}`
 }
 export const tmdbImageSrcW154 = (path) => {
-  return `https://image.tmdb.org/t/p/w154${path}`
+  return `${mainPath}/w154${path}`
 }
 export const tmdbImageSrcW92 = (path) => {
-  return `https://image.tmdb.org/t/p/w92${path}`
+  return `${mainPath}/w92${path}`
 }
 export const tmdbMiniImageSrc = (path) => {
   if (path) {
-    return `https://image.tmdb.org/t/p/w138_and_h175_face${path}`;
+    return `${mainPath}/w138_and_h175_face${path}`;
   } else {
     return "https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg";
     // return "/img/noProfilePicPng.png";
@@ -26,10 +27,10 @@ export const tmdbMiniImageSrc = (path) => {
   }
 }
 export const tmdbBackImageSrc = (path) => {
-  return `https://image.tmdb.org/t/p/original${path}`
+  return `${mainPath}/original${path}`
 }
 export const tmdbBackImageSrcW1280 = (path) => {
-  return `https://image.tmdb.org/t/p/w1280${path}`
+  return `${mainPath}/w1280${path}`
 }
 
 export const convertStringForQuery = (inputString) => {

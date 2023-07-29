@@ -38,11 +38,11 @@ export const moviesBySliderReducer = (state = initialState, action) => {
 };
 
 export const setMoviesForPreview = (preview, movies) => ({
-  type: 'SET_MOVIES_FOR_PREVIEW',
+  type: SET_MOVIES_FOR_PREVIEW,
   payload: { preview, movies }
 });
 export const setMoviesForMainSlider = (movies) => ({
-  type: 'SET_MOVIES_FOR_SLIDER',
+  type: SET_MOVIES_FOR_SLIDER,
   payload: movies
 });
 

@@ -22,22 +22,22 @@ const MoviesPreviewRow = ({ preview, ...props }) => {
     let newSlidesToShow = 7;
     let newSlidesToScroll = 5;
 
-    if (windowWidth < 650) {
-      newSlidesToShow = 2;
-      newSlidesToScroll = 1;
-    } else if (windowWidth < 768) {
-      newSlidesToShow = 3;
-      newSlidesToScroll = 1;
-    } else if (windowWidth < 920) {
-      newSlidesToShow = 4;
-      newSlidesToScroll = 2;
-    } else if (windowWidth < 1080) {
-      newSlidesToShow = 5;
-      newSlidesToScroll = 3;
-    } else if (windowWidth < 1440) {
-      newSlidesToShow = 6;
-      newSlidesToScroll = 4;
+    const breakpoints = [
+      { width: 0, slidesToShow: 2, slidesToScroll: 1 },
+      { width: 650, slidesToShow: 3, slidesToScroll: 1 },
+      { width: 768, slidesToShow: 4, slidesToScroll: 2 },
+      { width: 920, slidesToShow: 5, slidesToScroll: 3 },
+      { width: 1080, slidesToShow: 6, slidesToScroll: 4 },
+    ];
+
+    for (const breakpoint of breakpoints) {
+      if (windowWidth < breakpoint.width) {
+        newSlidesToShow = breakpoint.slidesToShow;
+        newSlidesToScroll = breakpoint.slidesToScroll;
+        break;
+      }
     }
+
     setSlidesToShow(newSlidesToShow);
     setSlidesToScroll(newSlidesToScroll);
   };

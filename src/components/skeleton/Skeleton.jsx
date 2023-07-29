@@ -43,8 +43,9 @@ const Skeleton = () => {
   }, []);
 
 
-  const renderSkeletonItem = () => {
-    return (<div className={clas.skeleton_promo_item}>
+  const renderSkeletonItem = (el, ind) => {
+
+    return (<div className={clas.skeleton_promo_item} key={ind}>
 
       <div className={clas.promo_item_bg}>
       </div>
@@ -52,7 +53,7 @@ const Skeleton = () => {
     );
   };
 
-  const skeletonItems = Array(10).fill(renderSkeletonItem());
+  const skeletonItems = Array(10).fill(1).map((el, ind) => renderSkeletonItem(el, ind));
 
   return (
     <>

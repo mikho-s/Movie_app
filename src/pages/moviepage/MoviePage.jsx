@@ -85,7 +85,7 @@ const MoviePage = () => {
             </div>
             <div className={`${clas.movie_info} container`}>
               <MovieDetails movie={movie} cast={cast} />
-              <DetailsVideos trailer={trailer} videos={videos} />
+              {/* <DetailsVideos trailer={trailer} videos={videos} /> */}
               <DetailImages backImages={backDropImages} posterImages={posterImages} />
             </div>
           </div>
