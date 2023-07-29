@@ -68,8 +68,8 @@ const Skeleton = () => {
       </div>
       <div className={clas.previews_block}>
         {previews.map((preview, index) => {
-          return <div className={clas.previews_item} key={index + preview.rowTitle}>
-            <div className={clas.previews_title}>{preview.rowTitle}</div>
+          return <div className={clas.previews_item} key={preview.rowTitle + index}>
+            <div className={clas.previews_title} >{preview.rowTitle}  </div>
             <Slider slidesToShow={slidesToShow} slidesToScroll={slidesToScroll}>
               {skeletonItems}
             </Slider>

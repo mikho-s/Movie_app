@@ -6,6 +6,7 @@ import { getSomeImages, getSomePosters, tmdbBackImageSrc, } from '@utils/utils';
 import MovieDetails from '@components/moviePageComponents/MovieDetails';
 import DetailsVideos from '@components/moviePageComponents/DetailsVideos';
 import DetailImages from '@components/moviePageComponents/DetailImages';
+import { useFetching } from 'src/hooks/useFetching';
 
 const MoviePage = () => {
   const [movie, setMovie] = useState({});
@@ -18,27 +19,55 @@ const MoviePage = () => {
   const location = useLocation();
 
 
-  useEffect(() => {
-    const fetchMovies = async () => {
-      const data = await getPromoSimpleReq(location.pathname);
-      setMovie(data);
-      // console.log(movie);
-      const castData = await getPromoSimpleReq(location.pathname + '/credits');
-      // console.log(castData);
-      setCast(castData.cast)
-      // console.log(cast);
-      const { trailerKey, videosData } = await getTrailerAndVideos(location.pathname + '/videos');
-      // console.log(videosData);
-      setTrailer(trailerKey);
-      setVideosData(videosData);
-      const images = await getPromoSimpleReq(location.pathname + '/images');
-      console.log(images);
-      // debugger
-      setBackDropImages(getSomeImages(images.backdrops, 8));
-      setPosterImages(getSomePosters(images.posters, 2));
+  const [fetchMovieData, isLoadingMovieData, errorMovieData] = useFetching(async () => {
+    const data = await getPromoSimpleReq(location.pathname);
+    console.log(errorMovieData);
+    setMovie(data);
+  });
+  const [fetchCastData, isLoadingCastData, errorCastData] = useFetching(async () => {
+    const data = await getPromoSimpleReq(location.pathname + '/credits');
+    console.log(errorCastData);
+    setCast(data.cast);
+  });
+  const [fetchVideosData, isLoadingVideostData, errorVideosData] = useFetching(async () => {
+    const { trailerKey, videosData } = await getTrailerAndVideos(location.pathname + '/videos');
+    setTrailer(trailerKey);
+    setVideosData(videosData);
+    console.log(errorVideosData);
+  });
+  const [fetchImagesData, isLoadingImagesData, errorImagesData] = useFetching(async () => {
+    const images = await getPromoSimpleReq(location.pathname + '/images');
+    setBackDropImages(getSomeImages(images.backdrops, 8));
+    setPosterImages(getSomePosters(images.posters, 2));
+    console.log(errorImagesData);
+  });
 
-    };
-    fetchMovies();
+
+
+
+  useEffect(() => {
+    // const fetchMovies = async () => {
+    // const data = await getPromoSimpleReq(location.pathname);
+    // setMovie(data);
+    // console.log(movie);
+    // const castData = await getPromoSimpleReq(location.pathname + '/credits');
+    // setCast(castData.cast)
+    // console.log(castData);
+    // console.log(cast);
+    // const { trailerKey, videosData } = await getTrailerAndVideos(location.pathname + '/videos');
+    // setTrailer(trailerKey);
+    // setVideosData(videosData);
+    // console.log(videosData);
+    // const images = await getPromoSimpleReq(location.pathname + '/images');
+    // setBackDropImages(getSomeImages(images.backdrops, 8));
+    // setPosterImages(getSomePosters(images.posters, 2));
+
+    // };
+    // fetchMovies();
+    fetchMovieData();
+    fetchCastData();
+    fetchVideosData();
+    fetchImagesData();
 
   }, []);
 
