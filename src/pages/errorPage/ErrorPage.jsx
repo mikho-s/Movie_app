@@ -11,7 +11,8 @@ const ErrorPage = () => {
     <div className={clas.main}>
 
       <div className={clas.content}>
-        ERROR PAGE
+        <div className={clas.code_error}>404</div>
+        <div className={clas.text_error}>Not Found</div>
       </div>
 
     </div>

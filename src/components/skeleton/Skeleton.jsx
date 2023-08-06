@@ -43,17 +43,16 @@ const Skeleton = () => {
   }, []);
 
 
-  const renderSkeletonItem = () => {
-    return (<div className={clas.skeleton_promo_item}>
+  const renderSkeletonItem = (el, ind) => {
+    return (<div className={clas.skeleton_promo_item} key={ind}>
 
-      <div className={clas.promo_item_bg}>
+      <div className={clas.promo_item_bg} >
       </div>
     </div>
     );
   };
 
-  const skeletonItems = Array(10).fill(renderSkeletonItem());
-
+  const skeletonItems = Array(10).fill(1).map((el, ind) => renderSkeletonItem(el, ind));
   return (
     <>
       <div className={clas.main}>
@@ -68,7 +67,7 @@ const Skeleton = () => {
       </div>
       <div className={clas.previews_block}>
         {previews.map((preview, index) => {
-          return <div className={clas.previews_item} key={preview.rowTitle + index}>
+          return <div className={clas.previews_item} key={preview.rowTitle}>
             <div className={clas.previews_title} >{preview.rowTitle}  </div>
             <Slider slidesToShow={slidesToShow} slidesToScroll={slidesToScroll}>
               {skeletonItems}

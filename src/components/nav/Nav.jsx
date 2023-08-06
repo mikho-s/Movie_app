@@ -1,5 +1,5 @@
 import React from 'react';
-import cls from './nav.module.scss';
+import clas from './nav.module.scss';
 import { Link, NavLink } from 'react-router-dom';
 
 const Nav = () => {
@@ -16,10 +16,10 @@ const Nav = () => {
 
 
   return (
-    <nav className={cls.menu}>
-      <ul className={cls.body}>
+    <nav className={clas.menu}>
+      <ul className={clas.body}>
         {menuItem.map(el =>
-          <NavLink to={el.link} key={el.link} className={cls.item}>{el.name}</NavLink>)}
+          <NavLink to={el.link} key={el.link} className={clas.item}>{el.name}</NavLink>)}
       </ul>
     </nav>
   );

@@ -48,7 +48,7 @@ const Header = () => {
           <div className={clas.search}>
             <input
               type="text"
-              className={clas.input}
+              className={clas.search_input}
               value={searchText}
               onChange={handleInputChange}
               onFocus={handleInputFocus}

@@ -21,22 +21,37 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width:(400px)) {
+    padding: 10px;
+  }
 }
 
 
 .logo {
   color: white;
   font-size: $fzmain;
+
+  @media (max-width:(600px)) {
+    display: none;
+
+  }
 }
 
 .search_block {
-  display: flex;
+  // display: flex;
   justify-content: center;
+
+
 }
 
-input {
+.search_input {
   color: white;
   background-color: transparent;
+
+  @media (max-width:(500px)) {
+    max-width: 100px;
+  }
 }
 
 .search_logo {

@@ -9,12 +9,21 @@
 .header_content {
   display: flex;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
+
+  @media (max-width:(600px)) {
+    padding-bottom: 20px;
+  }
+
 }
 
 .searchOptions {
 
   display: flex;
   gap: 10px;
+
   // color: #960000;
+  @media (max-width:(600px)) {
+    flex-direction: column;
+  }
 }

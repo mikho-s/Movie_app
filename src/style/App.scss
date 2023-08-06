@@ -55,16 +55,17 @@ $minWidth: 400px;
 }
 
 // .active {
-//   color: rgb(255, 0, 0);
+//   color: rgb(255, 0, 234);
+//   // font-size: 50px;
 // }
 
 .regular_title {
   font-size: 35px;
   padding: 15px 0;
   color: white;
-}
 
-.load {
-  color: red;
-  font-size: 40px;
+  @media (max-width:(500px)) {
+    font-size: 20px;
+
+  }
 }

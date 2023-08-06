@@ -1,10 +1,21 @@
-.main {}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-.error_header {
+
+.content {
+  text-align: center;
   color: red;
 }
 
-.content {
-  color: red;
+.code_error {
+  font-size: 5rem;
+}
 
+.text_error {
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }

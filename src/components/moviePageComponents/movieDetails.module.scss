@@ -88,21 +88,40 @@
 }
 
 .cast_block {
-  position: relative;
-  max-width: 900px;
-  // padding-right: 30px;
-  @include adaptiveValue("width", 1000, 600, 1500, 1200, 1);
-  @include adaptiveValue("width", 600, 400, 1200, 450, 1);
-  @include adaptiveValue("width", 800, 400, 800, 450, 1);
+  // position: relative;
+  // max-width: 900px;
+  // // padding-right: 30px;
+  // @include adaptiveValue("width", 1000, 600, 1500, 1200, 1);
+  // @include adaptiveValue("width", 600, 400, 1200, 450, 1);
+  // @include adaptiveValue("width", 800, 400, 800, 450, 1);
 
-  @media (max-width:(800px)) {
-    padding-right: 0;
-    max-width: 100%;
+  // @media (max-width:(800px)) {
+  //   padding-right: 0;
+  //   max-width: 100%;
 
-  }
+  // }
 
+  // display: flex;
+  // flex-direction: column;
   display: flex;
-  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.actors_title {
+  font-size: 2rem;
+}
+
+.actors_items {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+.actors_item {
+  color: rgb(168, 168, 168);
+  cursor: pointer;
 }
 
 .cast_block_title {
@@ -111,32 +130,51 @@
 
 .cast_items {}
 
-.cast_item_body {
-  // cursor: pointer;
-  padding: 0 5px;
-  position: relative;
-  height: 100%;
+// .cast_item_body {
+//   // cursor: pointer;
+//   padding: 0 5px;
+//   position: relative;
+//   height: 100%;
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 12px;
-  }
-}
+//   img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: contain;
+//     border-radius: 12px;
+//   }
+// }
 
-.cast_image {
-  height: 100%;
-}
+// .cast_image {
+//   height: 100%;
+// }
 
-.actor_name {
-  position: absolute;
-  bottom: 0;
+// .actor_name {
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   color: rgb(255, 255, 255);
+//   padding: 10px 0;
+//   width: 100%;
+//   text-align: center;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   font-size: 0.9em;
+// }
+
+.actor_image_hover {
+  position: fixed;
+  top: 0;
   left: 0;
-  color: rgb(255, 255, 255);
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-size: 0.9em;
+  transform: translate(-50%, -100%);
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 9;
+  pointer-events: none;
+}
+
+.actor_image_hover img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
 }

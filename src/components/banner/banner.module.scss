@@ -33,15 +33,7 @@
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%);
   }
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 50%;
-  //   background: linear-gradient(to top, rgba(0, 0, 0, 0.83) 20%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.45) 70%, rgba(0, 0, 0, 0) 100%);
-  // }
+
 }
 
 .baner_content {
@@ -50,6 +42,10 @@
   padding-top: 7rem;
   padding-left: 5rem;
   max-width: 440px;
+
+  @media (max-width:(600px)) {
+    padding-left: 3rem;
+  }
 }
 
 .baner_title {
@@ -61,6 +57,10 @@
   display: flex;
   gap: 20px;
 
+  @media (max-width:(600px)) {
+    padding-top: 1rem;
+  }
+
 }
 
 .baner_btn {}
@@ -70,4 +70,12 @@
   padding-top: 2rem;
   max-width: 400px;
 
+  @media (max-width:(600px)) {
+    padding-top: 1rem;
+    max-width: 350px;
+  }
+
+  @media (max-width:(450px)) {
+    max-width: 300px;
+  }
 }

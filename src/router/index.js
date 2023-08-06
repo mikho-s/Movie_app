@@ -11,7 +11,7 @@ export const routes = [
   // { path: "/", element: <HomePage />, exact: true },
   { path: "login", element: <LoginPage />, exact: true },
   { path: "*", element: <ErrorPage />, exact: true },
-  { path: "about", element: <AboutPage />, exact: true },
+  // { path: "about", element: <AboutPage />, exact: true },
   { path: "movies", element: <MoviesPage />, exact: true },
   // { path: "movie/:id/:name", element: <MoviePage />, exact: true },
   { path: "movie/:id", element: <MoviePage />, exact: false },

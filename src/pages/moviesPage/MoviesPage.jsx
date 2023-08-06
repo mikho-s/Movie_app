@@ -22,7 +22,7 @@ const MoviesPage = () => {
   const location = useLocation();
   const initialPath = location.pathname;
   let allGenres, mediaType;
-  console.log(initialPath);
+  // console.log(initialPath);
   if (initialPath === "/movies") {
     mediaType = 'movie'
     allGenres = genresMovie;
@@ -111,7 +111,7 @@ const MoviesPage = () => {
               value={genres}
               onChange={genre => handleGenreChange(genre)}
               options={allGenres.map(genre => ({ value: genre.id, label: genre.name }))}
-              minWidth={'300px'}
+              minWidth={'200px'}
               maxWidth={'500px'}
             />
           </div>

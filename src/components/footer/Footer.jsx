@@ -7,7 +7,7 @@ import Nav from '@components/nav/Nav';
 const Footer = () => {
   return (
     <footer className={`container ${clas.footer_main}`}>
-      <div className={clas.footer_item}>2023</div>
+      <div className={clas.footer_item}>{new Date().getFullYear()}</div>
       <Nav />
     </footer>
   );

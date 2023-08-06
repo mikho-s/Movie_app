@@ -3,6 +3,7 @@ import clas from './movieDetails.module.scss';
 import { convertStringForQuery, getYearMovie, tmdbImageSrc, tmdbMiniImageSrc } from '@utils/utils';
 import Slider from '@components/slider/Slider';
 import { Link } from 'react-router-dom';
+import { getPromoSimpleReq } from 'src/API/axios';
 
 
 
@@ -10,9 +11,18 @@ const MovieDetails = ({ movie, cast, ...props }) => {
   const [slidesToShow, setSlidesToShow] = useState(5);
   const [slidesToScroll, setSlidesToScroll] = useState(3);
   const [mediaType, setMediaType] = useState('');
+  const [hoveredActor, setHoveredActor] = useState(null);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
 
 
-  console.log(movie);
+
+  console.log(cast);
+  const getActors = (cast) => {
+    if (cast.length > 10) {
+      return cast.slice(0, 10);
+    }
+    return cast;
+  }
 
   useEffect(() => {
 
@@ -47,8 +57,18 @@ const MovieDetails = ({ movie, cast, ...props }) => {
     setSlidesToScroll(newSlidesToScroll);
   };
 
-  const clickItem = (person) => {
-    console.log(person);
+
+  const handleActorMouseEnter = (actor, event) => {
+    setHoveredActor(actor);
+    updateCursorPosition(event);
+  };
+
+  const handleActorMouseLeave = () => {
+    setHoveredActor(null);
+  };
+
+  const updateCursorPosition = (event) => {
+    setPosition({ x: event.clientX, y: event.clientY });
   };
 
   return (
@@ -79,7 +99,7 @@ const MovieDetails = ({ movie, cast, ...props }) => {
           </div>
           <div className={clas.overview}>{movie.overview}</div>
           <div className={clas.cast_block}>
-            <div className='regular_title'>Cast</div>
+            {/* <div className='regular_title'>Cast</div>
             <div className={clas.cast_items}>
               <Slider slidesToShow={slidesToShow} slidesToScroll={slidesToScroll}  >
                 {cast.map(person => {
@@ -96,6 +116,26 @@ const MovieDetails = ({ movie, cast, ...props }) => {
                 })
                 }
               </Slider>
+            </div> */}
+            <div className={clas.actors_title}>Actors:</div>
+            <div className={clas.actors_items}>
+              {getActors(cast).map(actor => {
+                return <Link
+                  to={`/person/${actor.id}`}
+                  key={actor.id}
+                  className={clas.actors_item}
+                  onMouseEnter={(e) => handleActorMouseEnter(actor, e)}
+                  onMouseLeave={handleActorMouseLeave}
+
+                >{actor.name}</Link>
+              })}
+              {hoveredActor && (
+                <div className={clas.actor_image_hover}
+                  style={{ top: position.y, left: position.x }}
+                >
+                  <img src={tmdbMiniImageSrc(hoveredActor.profile_path)} alt="" />
+                </div>
+              )}
             </div>
           </div>
         </div>

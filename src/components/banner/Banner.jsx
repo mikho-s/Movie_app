@@ -42,7 +42,7 @@ const Banner = ({ movie }) => {
           <Link to={`${movie.media_type}/${movie.id}`}>
             <Buttons >PLAY</Buttons>
           </Link>
-          <Buttons >+ My List</Buttons>
+          {/* <Buttons >+ My List</Buttons> */}
         </div>
         <div className={clas.baner_description}>
           {movie.overview ? cutDescrip(movie.overview, 150) : movie.overview}

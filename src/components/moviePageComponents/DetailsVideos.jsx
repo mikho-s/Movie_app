@@ -16,7 +16,7 @@ const DetailsVideos = ({ trailer, videos, ...props }) => {
           title="YouTube video player"
         ></iframe>
       </div>
-      <div className={clas.videos_block}>
+      {/* <div className={clas.videos_block}>
         {videos.length > 1
           ? <>
             <div className='regular_title'>
@@ -39,9 +39,7 @@ const DetailsVideos = ({ trailer, videos, ...props }) => {
           </>
           : <></>
         }
-
-
-      </div>
+      </div> */}
     </div>
   );
 };
